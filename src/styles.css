@@ -1,0 +1,245 @@
+:root {
+  --main-color: #111827;
+  --background-color: #f3f4f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body,
+html {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--background-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  width: 100%;
+  background-color: var(--main-color);
+}
+.containerHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px 15px 20px;
+  align-items: center;
+}
+.containerHeader a {
+  color: white;
+}
+.containerHeader nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+}
+footer {
+  background-color: var(--main-color);
+  padding: 15px 20px 15px 20px;
+  color: white;
+  justify-items: center;
+}
+.slider {
+  background-color: grey;
+  max-width: 1000px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: clip;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto 0 auto;
+  width: 100%;
+}
+.imageContainer {
+  width: 100%;
+  height: 100%;
+}
+.imageContainer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.75);
+  transition: all 0.3s ease-out;
+}
+.imageContainer img.active {
+  z-index: 5;
+  opacity: 1;
+}
+.imageContainer img.inactive {
+  z-index: 0;
+  opacity: 0;
+}
+.slider button {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 0;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  aspect-ratio: 1;
+  width: 32px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+.popular {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+  gap: 10px;
+}
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.containerPopular {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+.containerPopular article {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.formLogin,
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 500px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.loginPage,
+.registerPage {
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+.formLogin button,
+.formRegister button {
+  transition: all 0.3s ease-out;
+  font-size: 14px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 0 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.formLogin button:hover {
+  background-color: #4177ec;
+}
+.formLogin input,
+.formRegister input {
+  outline: none;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(189, 189, 189);
+  transition: all 0.3s ease-out;
+}
+.formLogin input:focus,
+.formRegister input:focus {
+  border: 1px solid rgb(150, 150, 150);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.formLogin a,
+.formRegister a {
+  color: #2563eb;
+}
+.formRegister button {
+  background-color: #16a34a;
+}
+.formRegister button:hover {
+  background-color: #23bb5b;
+}
+.loginNav,
+.registerNav,
+.requestsCreateNav,
+.ordersNav,
+.adminNav,
+.logoutNav {
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+}
+.loginNav {
+  background-color: rgb(30, 125, 202);
+}
+.loginNav:hover {
+  background-color: rgb(65, 142, 206);
+}
+.registerNav {
+  border: 1px solid rgb(30, 125, 202);
+}
+.registerNav:hover {
+  background-color: rgb(30, 125, 202);
+}
+.requestsCreateNav {
+  background-color: #28a745;
+}
+.requestsCreateNav:hover {
+  background-color: #36bd56;
+}
+.ordersNav {
+  background-color: #007bff;
+}
+.ordersNav:hover {
+  background-color: #2e93ff;
+}
+.adminNav {
+  background-color: #6f42c1;
+}
+.adminNav:hover {
+  background-color: #8355d8;
+}
+.logoutNav {
+  background-color: #dc3545;
+}
+.logoutNav:hover {
+  background-color: #e24b5a;
+}

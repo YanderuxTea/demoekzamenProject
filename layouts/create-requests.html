@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Создание заявки</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background: #f3f4f6;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      form {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+      }
+
+      button {
+        padding: 12px;
+        width: 100%;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 6px;
+      }
+
+      @media (max-width: 390px) {
+        .container {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 style="margin-bottom: 20px">Создание заявки</h2>
+
+      <form>
+        <input placeholder="ФИО" />
+
+        <select>
+          <option>Выберите курс</option>
+          <option>Web разработка</option>
+          <option>UI/UX</option>
+          <option>Data Science</option>
+        </select>
+
+        <textarea placeholder="Комментарий"></textarea>
+
+        <button>Отправить заявку</button>
+      </form>
+    </div>
+  </body>
+</html>

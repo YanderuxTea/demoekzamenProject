@@ -1,0 +1,14 @@
+services:
+  php:
+    image: php:8.2-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
