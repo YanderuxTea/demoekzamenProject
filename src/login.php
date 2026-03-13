@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!empty($_SESSION)) {
+    header('Location: index.php');
+    exit;
+}
 require_once 'db.php';
 if (isset($_POST['loginButton'])) {
     $error = '';
@@ -14,7 +19,6 @@ if (isset($_POST['loginButton'])) {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
     if ($user && password_verify($pass, $user['password'])) {
-        session_start();
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_role'] = $user['role'];
         header('Location: index.php');

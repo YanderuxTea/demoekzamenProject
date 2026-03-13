@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!empty($_SESSION)) {
+    header('Location: index.php');
+    exit;
+}
 require_once 'db.php';
 if (isset($_POST['registerButton'])) {
     $login = $_POST['login'];

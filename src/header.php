@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 // echo '<pre>';
 // print_r($_SESSION); // Это покажет все данные сессии
 // echo '</pre>';

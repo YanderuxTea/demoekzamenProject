@@ -144,7 +144,8 @@ footer {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .formLogin,
-.formRegister {
+.formRegister,
+.createRqForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -155,7 +156,10 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 .loginPage,
-.registerPage {
+.registerPage,
+.createRqPage,
+.ordersPage,
+.adminPage {
   display: flex;
   text-align: center;
   margin: auto;
@@ -175,7 +179,10 @@ footer {
   background-color: #4177ec;
 }
 .formLogin input,
-.formRegister input {
+.formRegister input,
+.containerFormCreateRq label select,
+.containerFormCreateRq label input,
+.selectStatus {
   outline: none;
   padding: 10px;
   border-radius: 4px;
@@ -183,7 +190,10 @@ footer {
   transition: all 0.3s ease-out;
 }
 .formLogin input:focus,
-.formRegister input:focus {
+.formRegister input:focus,
+.containerFormCreateRq label select:focus,
+.containerFormCreateRq label input:focus,
+.selectStatus:focus {
   border: 1px solid rgb(150, 150, 150);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
@@ -242,4 +252,88 @@ footer {
 }
 .logoutNav:hover {
   background-color: #e24b5a;
+}
+.containerFormCreateRq {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 10px;
+}
+.containerFormCreateRq label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.createRqButton {
+  border: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 10px;
+  transition: all 0.3s ease-out;
+  background-color: #23bb5b;
+  color: white;
+}
+.createRqButton:hover {
+  background-color: #37d672;
+}
+textarea {
+  resize: none;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(197, 197, 197);
+  transition: all 0.3s ease-out;
+}
+textarea:focus {
+  border: 1px solid rgb(170, 170, 170);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.ordersDiv,
+.adminDiv {
+  background-color: white;
+  width: 800px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ordersContainer,
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 600px;
+  overflow-y: auto;
+  padding: 20px;
+}
+.cardOrder {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.feedbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.submitFeedbackButton {
+  border: none;
+  padding: 10px;
+  transition: all 0.3s ease-out;
+  background-color: rgb(22, 182, 57);
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+.submitFeedbackButton:hover {
+  background-color: rgb(32, 223, 73);
 }
